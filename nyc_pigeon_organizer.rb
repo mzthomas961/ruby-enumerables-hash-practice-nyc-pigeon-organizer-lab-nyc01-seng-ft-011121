@@ -1,11 +1,9 @@
 def nyc_pigeon_organizer(data)
   pigeon_list = {}
   data.each do |key, value| #key: color, gender, lives. #value: hash
-    value.each do |describe, array| #describe: purple, male, subway...
+    value.each do |describe, array| 
       array.each do |name| #name: index inside aray
-        #check if the empty hash has name inside yet
         if pigeon_list.has_key?(name)
-          #check if the value of name key has key(color, gender, lives)
           if pigeon_list[name].has_key?(key)
           #if name has key already, add the describe value at the current iteration
             pigeon_list[name][key] << describe.to_s
