@@ -5,13 +5,13 @@ def nyc_pigeon_organizer(data)
       array.each do |name| #name: index inside aray
         if pigeon_list.has_key?(name)
           if pigeon_list[name].has_key?(key)
-          #if name has key already, add the describe value at the current iteration
+         
             pigeon_list[name][key] << describe.to_s
-          #if name has no key at the current iteration yet, set the new hash
+         
           else
             pigeon_list[name][key] = [describe.to_s]
           end
-        #set name level 1 -> key level 2 with describe as value of the hash 
+      
         else
           pigeon_list[name] = {key => [describe.to_s]} #describe was symbol before so turn it to string
         end
